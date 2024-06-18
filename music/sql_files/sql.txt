@@ -1,0 +1,11 @@
+CREATE DATABASE music;
+
+CREATE TABLE songs (
+    song_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    song_img VARCHAR(100),
+    song_link VARCHAR(1000),
+    artist VARCHAR(100),
+);
+
+
