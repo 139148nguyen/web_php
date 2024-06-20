@@ -1,17 +1,98 @@
-*{
+/* Reset css */
+
+* {
     margin: 0;
     padding: 0;
 }
 
-form{
-    margin:auto;
+
+
+a {
+    font-style: normal;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Variables Css */
+
+:root {
+    --bgcolor-base: #000000;
+    --bgcolor-primary: #121212;
+    --bgcolor-gray: #242424;
+    --tcolor-base: #a7a7a7;
+    --tcolor-light: #ffffff;
+    --tcolor-dark: #000000;
+    --bg-height: calc(100% - 16px);
+    --bg-width: calc(100% - 16px);
+
+}
+
+
+
+body {
+    color: var(--tcolor-base);
+    font-family: Arial, Helvetica, sans-serif;
+    width: var(--bg-width);
+    height: var(--bg-height);
+    padding: 8px;
+    background-color: var(--bgcolor-base);
+}
+
+.frame {
+    border-radius: 8px;
+}
+
+
+.light-text {
+    color: var(--tcolor-light);
+}
+
+.label-text {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.base-text {
+    color: var(--tcolor-base);
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+.button {
+    width: 80px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 4px;
+    display: block;
+    border: 1px solid var(--tcolor-base);
+    border-radius: 6px;
+}
+
+.button:hover {
+    border-color: var(--tcolor-light);
+    transform: scale(1.04);
+}
+
+
+/* 
+form {
+    margin: auto;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     max-width: 250px;
 }
 
-form >input {
+form>input {
     margin-bottom: 8px;
     padding: 4px;
-}
+} */
