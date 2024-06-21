@@ -43,6 +43,12 @@ body {
     background-color: var(--bgcolor-base);
 }
 
+.body{
+    display: flex;
+    height: calc(100% - 64px);
+    width: var(--bg-width);
+}
+
 .frame {
     border-radius: 8px;
 }
@@ -81,6 +87,35 @@ ul {
     border-color: var(--tcolor-light);
     transform: scale(1.04);
 }
+
+.content__header{
+    width: 970px;
+    position: fixed;
+    min-height: 64px;
+    border-top-left-radius: 8px ;
+    border-top-right-radius: 8px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #242424;
+    /* border-radius: 20px; */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
 
 
 /* 

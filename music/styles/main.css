@@ -22,24 +22,35 @@
 
 /* CSS Side bar */
 .side-bar {
+    margin-right: 8px;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 8px;
     max-width: 356px;
     /* background-color: var(--bgcolor-primary); */
-    height: calc(--bg-height - 64px);
+ 
 }
 
-.side-bar__top,
-.side-bar__bottom {
-    width: 100%;
+.side-bar, .content{
+    width:  calc(var(--bg-width) - 356px);
+
 }
+
+/* .side-bar__top,
+.side-bar__bottom {
+    width: 95%;
+} */
 
 .side-bar__top {
-    height: 156px;
+    height: 20%;
+    min-height: 150px;
     margin-bottom: 8px;
 }
 
 .side-bar__bottom {
-    height: 484px;
+    flex: 1;
+    /* height: 60%; */
+    /* max-height: 484px; */
 }
 
 
@@ -100,5 +111,29 @@
 
 
 .box-library {
-    height: 214px;
+    height: 60%;
+}
+
+
+/* CSS content */
+
+.content{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bgcolor-primary);
+    margin-bottom: 8px;
+    overflow:auto;
+
+}
+
+
+.content__header{
+    background-color: #101010;
+}
+.content__body{
+    background-color: #1e1e1e;
+    flex: 1;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
