@@ -132,8 +132,9 @@
     background-color: #101010;
 }
 .content__body{
-    background-color: #1e1e1e;
+    /* background-color: #1e1e1e; */
     flex: 1;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    background-image: linear-gradient(to bottom, var(--bgcolor-gray) , var(--bgcolor-base));
 }
