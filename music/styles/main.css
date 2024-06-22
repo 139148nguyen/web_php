@@ -28,11 +28,12 @@
     margin-bottom: 8px;
     max-width: 356px;
     /* background-color: var(--bgcolor-primary); */
- 
+
 }
 
-.side-bar, .content{
-    width:  calc(var(--bg-width) - 356px);
+.side-bar,
+.content {
+    width: calc(var(--bg-width) - 356px);
 
 }
 
@@ -117,24 +118,202 @@
 
 /* CSS content */
 
-.content{
-    flex:1;
+.content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     background-color: var(--bgcolor-primary);
     margin-bottom: 8px;
-    overflow:auto;
+    overflow: auto;
 
 }
 
 
-.content__header{
+.content__header {
     background-color: #101010;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.content__body{
+
+.content__body {
     /* background-color: #1e1e1e; */
     flex: 1;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    background-image: linear-gradient(to bottom, var(--bgcolor-gray) , var(--bgcolor-base));
+    background-image: linear-gradient(to bottom, #1e1e1e, #121212);
+}
+
+.move-button {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 0 0 20px;
+    /* flex: 1; */
+
+}
+
+.prev-button,
+.next-button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: normal;
+    border: 1 solid gray;
+    /* padding: 10px; */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 4px;
+    cursor: no-drop;
+}
+
+.login-signup-button {
+    /* flex: 1; */
+    padding: 0 24px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.sign-up,
+.log-in {
+    display: block;
+    padding: 12px 32px;
+    font-weight: 600;
+    /* opacity: 0.8; */
+}
+
+.sign-up {
+    color: var(--tcolor-base);
+}
+
+.log-in {
+    color: var(--tcolor-dark);
+    background-color: var(--tcolor-light);
+    border-radius: 24px;
+}
+
+.sign-up:hover {
+    transform: scale(1.1);
+    color: var(--tcolor-light);
+}
+
+
+.log-in:hover {
+    transform: scale(1.1);
+    opacity: 1.1;
+    background-color: #ebe7e7;
+}
+
+
+/* CSS content body */
+
+.list-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-header>a:hover {
+    text-decoration: underline;
+}
+
+.category-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--tcolor-light);
+}
+
+.show-all {
+    color: var(--tcolor-base);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+.list-body {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.artist-card,
+.song-album-card {
+    position: relative;
+    height: 210px;
+    width: 150px;
+    background-color: transparent;
+    margin: 2px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.artist-card:hover,
+.song-album-card:hover {
+    background-color: var(--bgcolor-gray);
+    cursor: pointer;
+}
+
+.artist-card__img,
+.song-album-card__img {
+    background-color: white;
+    width: 140px;
+    height: 140px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+.artist-card__img {
+    border-radius: 50%;
+
+}
+
+.artist-card__title,
+.song-album-card__title {
+
+    margin: 8px 0 0 8px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-evenly;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    height: 20px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    color: var(--tcolor-light);
+}
+
+
+.play-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: green;
+    color: black;
+    display: none;
+}
+
+.artist-card:hover .play-icon,
+.song-album-card:hover .play-icon {
+    display: flex;
+}
+
+
+.song-album-card__img {
+    border-radius: 8px;
 }
