@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <form class="form-input" action="upload_artist.php" method="post" enctype="multipart/form-data">
+        <input type="text" placeholder="Enter Artist's Name" name="artistsName">
+        <input type="text" placeholder="Enter Artist's Role" name="artistsRole">
+        <p>Select artist image to upload: </p>
+        <input type="file" name="artistImg" id="artistImg">
+        <input type="submit" value="Add Artist" name="submit">
+    </form>
+</body>
+
+</html>

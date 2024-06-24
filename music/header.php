@@ -63,27 +63,5 @@
 
             </div>
         </div>
-        <div class="content frame">
-            <div class="content__header">
-                <div class="move-button">
-                    <button class="prev-button">
-                        
-                    </button>
-                </div>
-                <div class="login-signup-button">
-
-                </div>
-            </div>
-            <div class="content__body">
-                <div class="list-music">
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="advertise"></div>
-    </div>
-</body>
-
-</html>
+        
+    
