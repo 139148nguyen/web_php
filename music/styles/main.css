@@ -111,7 +111,10 @@
 
 
 .box-library {
-    height: 60%;
+    height: 54px;
+    width: 100%;
+    /* background-color: var(--bgcolor-gray);
+    border-radius: 8px; */
 }
 
 
