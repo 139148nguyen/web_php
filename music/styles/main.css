@@ -322,3 +322,105 @@ h3 {
 .song-album-card__img {
     border-radius: 8px;
 }
+
+
+
+/* CSS upload artists or upload songs  */
+
+.upload-page {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+}
+
+.list-artist-sql {
+    display: block;
+    flex: 1;
+    height: 500px;
+    padding: 8px;
+    overflow: hidden;
+
+}
+
+.list-arist {
+    margin: 0;
+    padding: 0;
+    height: 80%;
+    overflow: auto;
+}
+
+.artist-tile {
+    padding: 8px;
+    display: flex;
+    width: calc(100% - 16px);
+    height: 70px;
+    border-radius: 4px;
+}
+
+.artist-tile:hover {
+    background-color: gray;
+}
+
+.artist-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.artist-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.artist-info {
+    flex: 1;
+    margin-left: 8px;
+}
+
+.artist-role {
+    font-size: 12px;
+}
+
+.button-edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.delete-button {
+    display: block;
+    position: relative;
+}
+
+.delete-button::after {
+    content: "/f1f8";
+    font-family: FontAwesome;
+}
+
+
+.search-bar {
+    display: flex;
+    width: calc(100%);
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.search-bar>input {
+    flex: 1;
+    padding: 4px;
+    display: block;
+    border-radius: 6px;
+    border: none;
+
+}
+
+.search-icon {
+    margin: 0px 4px;
+}
+
+.form-input>select {
+    padding: 8px;
+    border-radius: 12px;
+    border: none;
+}
