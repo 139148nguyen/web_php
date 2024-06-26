@@ -9,7 +9,7 @@ require $_SESSION["DIR"]."/header.php";
 if(isset($_POST["delete_id"])){
     $delete_id = $_POST['delete_id'];
 
-    $sql_delete= "DELETE FROM artists WHERE artist_id = $delete_id;";  
+    $sql_delete= "DELETE FROM songs WHERE song_id = $delete_id;";  
 
     require $_SESSION["DIR"].'/sql_files/connected.php';
 
@@ -28,8 +28,9 @@ if(isset($_POST["songsName"])){
     $category = $_POST['category'];
     $songs_img = $_FILES['songsImg']['name'];
     $artist_id = $_POST["artist_id"];
+    $song_link = $_FILES['songsMp3']['name'];
 
-    $sql_insert = "INSERT INTO songs(song_name,category,song_img,artist_id) VALUES ('$song_name','$caterogy','$songs_img',$artist_id)";  
+    $sql_insert = "INSERT INTO songs(song_name,category,song_img,artist_id,song_link) VALUES ('$song_name','$category','$songs_img',$artist_id,'$song_link')";  
 
     require $_SESSION["DIR"].'/sql_files/connected.php';
 
@@ -37,8 +38,7 @@ if(isset($_POST["songsName"])){
 
     if($result != 1) {
         echo "Eror!";
-}
-
+    }
 }
 ?>
 
@@ -48,6 +48,8 @@ if(isset($_POST["songsName"])){
             <p> Add Songs</p>
             <input type="text" placeholder="Enter Song's Name" name="songsName">
             <input type="text" placeholder="Enter Song's Category" name="category">
+            <p>Select songs  to upload: </p>
+            <input type="file" name="songsMp3" id="songsMp3">
             <p>Select songs image to upload: </p>
             <input type="file" name="songsImg" id="songsImg">
             <select name="artist_id" id="">
@@ -84,7 +86,7 @@ if(isset($_POST["songsName"])){
         <?php 
             $sql_select_song = "SELECT * FROM songs ORDER BY song_name ASC";
             require $_SESSION["DIR"]."/sql_files/connected.php";
-            $result = $conn->query($sql_select_artist);
+            $result = $conn->query($sql_select_song);
             if($result->num_rows > 0 )
             {
                 while ($row = $result->fetch_assoc()){
@@ -93,9 +95,10 @@ if(isset($_POST["songsName"])){
                     $category= $row["category"];
                     $song_img = $row["song_img"];
                     $artist_id = $row["artist_id"];
+                    
 ?>
             <a class="artist-tile">
-                    <div class="artist-avatar" style="background-image:  url('http://localhost/web_apps/music/assets/images/<?php echo $artist_img ?>'); background-size:cover">
+                    <div class="artist-avatar" style="background-image:  url('http://localhost/web_apps/music/assets/images/<?php echo $song_img ?>'); background-size:cover">
                    </div>
                    <div class="artist-info">
                         <div class="artist-name"> <?php echo $song_name ?></div>
